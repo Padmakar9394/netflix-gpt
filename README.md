@@ -11,3 +11,7 @@
 -Create Signup user account
 -Implement SignIn user API
 -Created Redux Store with userSlice
+-Registered TMDB API and get Access Token
+-Created Custom Hook for NowPlaying Movies
+-Created MovieSlice and updated store with movie data
+-Embedded yt video and make it autoplay and mute     

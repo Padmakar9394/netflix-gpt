@@ -5,7 +5,6 @@ import { auth } from "../utils/firebase";
 
 import Header from './Header';
 import { checkValidData } from '../utils/validity';
-import { useNavigate } from 'react-router-dom';
 
 import { USER_AVATAR } from '../utils/constants';
 import { useDispatch } from 'react-redux';
@@ -19,7 +18,6 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleBtnClick = () => {
@@ -43,8 +41,7 @@ const Login = () => {
 
           const {uid, email, displayName, photoURL } = auth.currentUser;
           dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
-          
-          navigate("/browse");
+
         }).catch((error) => {
           // An error occurred
           
@@ -67,8 +64,7 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        // console.log(user);
-        navigate("/browse");
+
       })
       .catch((error) => {
         const errorCode = error.code;
