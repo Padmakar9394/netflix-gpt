@@ -9,7 +9,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YjMzNTMxMWY5MjE3MTZjOWM2YzJjODZjMDhiYjcwNyIsInN1YiI6IjY1ZDA1YjMwMWQzMTQzMDE2MWI5NzQ1MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fNa4D4j2zVZOBI6wAs6HT9O_-l2zInG_sR5nhCJCahs'
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   }
 };
 
@@ -21,4 +21,8 @@ export const SUPPORTED_LANGUAGES = [
   {identifier: "en", name: "English"},
   {identifier: "hindi", name: "Hindi"},
   {identifier: "spanish", name: "Spanish"},
-  ]
+];
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+
+export const MOVIE_POSTER_NOT_FOUND = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxqmiioDIsYbE9Hm7QYeJNwRlvuGNdLUipaDHYOOlgga8QWNenr-fGdOrUC5r3W6f0_7s&usqp=CAU";
