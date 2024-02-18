@@ -14,4 +14,8 @@
 -Registered TMDB API and get Access Token
 -Created Custom Hook for NowPlaying Movies
 -Created MovieSlice and updated store with movie data
--Embedded yt video and make it autoplay and mute     
+-Embedded yt video and make it autoplay and mute    
+-Add Secondary Container of movie list for categories like popular, top rated, trending
+-GPT Search Feature 
+-Added Multi Language Feature
+-Intergrate GPT API's
